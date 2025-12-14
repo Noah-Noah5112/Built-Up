@@ -1,0 +1,369 @@
+/* GLOBAL STYLES V2 - Earthy Minimalism */
+:root {
+    --primary-color: #1D3557; /* Deep Forest Green/Navy - Premium feel */
+    --accent-color: #A8DADC;  /* Light Tan/Teal - Subtle accent */
+    --light-bg: #F8F9FA; /* Creamy Off-White Background */
+    --text-color: #343A40; /* Dark Grey Text */
+    --font-serif: 'Times New Roman', serif; /* Classic, elegant serif */
+    --font-sans: 'Arial', sans-serif; /* Clean sans-serif */
+    --header-height: 70px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* HEADER & NAVIGATION */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 4rem;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: normal; /* Less aggressive font weight */
+    font-family: var(--font-serif); /* Serif logo for luxury feel */
+    color: var(--primary-color);
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 1.5rem 1.5rem;
+    display: block;
+    transition: color 0.3s, border-bottom 0.3s;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+}
+
+/* MAIN CONTENT */
+main {
+    flex-grow: 1;
+    padding: 0; /* Removing main padding for full bleed hero */
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* HERO SECTION (INDEX PAGE) */
+.hero-v2 {
+    display: flex;
+    min-height: calc(100vh - var(--header-height));
+    align-items: center;
+    background-color: #fff;
+}
+
+.hero-content-v2 {
+    padding: 4rem;
+    max-width: 50%;
+    text-align: left;
+}
+
+.hero-v2 h1 {
+    font-size: 4rem;
+    font-family: var(--font-serif);
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    line-height: 1;
+    font-weight: normal;
+}
+
+.hero-v2 p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    max-width: 450px;
+    color: #6c757d;
+}
+
+.hero-image-v2 {
+    max-width: 50%;
+    height: 100%;
+}
+
+.hero-image-v2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Fill the space */
+    display: block;
+}
+
+/* CALL TO ACTION BUTTONS */
+.cta-button-v2 {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 0; /* Square edges for modern look */
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    transition: background-color 0.3s, letter-spacing 0.3s;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.cta-button-v2:hover {
+    background-color: #fff;
+    color: var(--primary-color);
+    letter-spacing: 3px;
+}
+
+.cta-button-small-v2 {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.cta-button-small-v2:hover {
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+}
+
+/* FEATURED PRODUCTS SECTION */
+.featured-products-v2 {
+    padding: 6rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.featured-products-v2 h2 {
+    font-size: 2.8rem;
+    font-family: var(--font-serif);
+    color: var(--primary-color);
+    margin-bottom: 4rem;
+    font-weight: normal;
+}
+
+.product-grid-v2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem;
+}
+
+.product-item-v2 {
+    background-color: #fff;
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+
+.product-item-v2 img {
+    max-width: 100%;
+    height: 300px; /* Taller image space */
+    object-fit: cover; /* Use cover for a more editorial look */
+    margin-bottom: 1.5rem;
+}
+
+.product-item-v2 h3 {
+    color: var(--text-color);
+    font-family: var(--font-serif);
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    font-size: 1.5rem;
+}
+
+.product-item-v2 p {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+/* GENERIC CONTENT PAGES (About, Contact, Collections) */
+.content-page-v2 {
+    background: #fff;
+    padding: 5rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.content-page-v2 h2 {
+    font-family: var(--font-serif);
+    color: var(--primary-color);
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 0.5rem;
+    font-weight: normal;
+}
+
+.content-page-v2 h3 {
+    font-family: var(--font-serif);
+    color: var(--text-color);
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+/* CONTACT FORM */
+.contact-form-v2 {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.contact-form-v2 label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.contact-form-v2 input,
+.contact-form-v2 textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+}
+
+.contact-form-v2 input:focus,
+.contact-form-v2 textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+/* COLLECTIONS SECTION */
+.shoe-collection-grid-v2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.collection-item-v2 {
+    padding: 0;
+    text-align: center;
+    background-color: #fff;
+}
+
+.collection-item-v2 img {
+    max-width: 100%;
+    height: 350px;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.collection-item-v2 h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+}
+
+.collection-item-v2 p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--primary-color);
+    color: var(--light-bg);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Responsive Design Adjustments for V2 */
+@media (max-width: 992px) {
+    .hero-v2 {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .hero-content-v2, .hero-image-v2 {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .hero-content-v2 {
+        text-align: center;
+        order: 2; /* Content below image on mobile */
+    }
+
+    .hero-image-v2 {
+        order: 1;
+        max-height: 400px;
+    }
+
+    .hero-v2 h1 {
+        font-size: 3rem;
+    }
+
+    header {
+        padding: 0 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-products-v2 {
+        padding: 4rem 1rem;
+    }
+    .content-page-v2 {
+        padding: 2rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        display: none; /* Hide navigation on very small screens, typical in minimalist design */
+    }
+}
